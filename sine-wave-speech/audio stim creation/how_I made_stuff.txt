@@ -1,0 +1,65 @@
+1) In Praat, record all the sentences including the training ones.
+
+2) Use mark_pauses.praat script to mark the pauses on a TextGrid.
+    - can get all the Praat scripts from here: http://www.helsinki.fi/~lennes/praat-scripts/howto/slicing.html
+
+3) Manually check them all and adjust any that are too short or long:
+    i) I noticed that some stops got cut off during release, making them sound clipped
+    ii) The final boundary is placed at the end of the file, not the end of the last sound
+
+4) Use the label_from_text_file.praat to apply labels to each segment:
+    i) Set TextGrid tier to 1
+    ii) Start from second item in the tier, if the first item is silence
+    iii) Obviously you will need a file where every second line is a filename that corresponds to the sounds you recorded.
+
+5) Use save_labeled_intervals_to_wav_sound_files.praat to save all the files.
+
+6) Clear the Praat object list and load in all those wavs.
+
+7) Apply SWS.praat to each one, individually. Default settings were fine for me.
+    - For the training sounds, I did them seperately in Audacity by:
+        - load the wav
+        - add a new track
+        - use Generate...Noise to add 0.035 noise of the same length as the original wav
+        - Merge and Render those two tracks into one
+        - Save to wav with _NOISY appended to name
+
+8) Save each file with _SWS appended to the filename stem.
+    - Probably easy to script steps 7 and 8 but I didn't bother.
+
+9) With node.js and audiosprite (https://github.com/tonistiigi/audiosprite) installed, load the node CLI (should just have to type node and hit enter, just like python)
+    - in the Terminal, make sure you are in the folder where the wav files are stored.
+
+10) Copy and paste the contents of make_audiosprite.js into the node Terminal window.
+    - You will need to edit the files variable to match your filenames.
+    - Make sure the first item is a silent wav of a second or so.
+
+11) When that is done, it will save a file called audio.mp3. This is your audiosprite file.
+
+12) It will also spit out a big JSON file to the terminal. This has the time references for where each sound file starts and stops.
+
+13) Copy and paste that JSON file from the Terminal into a file. Edit it to look like the example times.json file and save it.
+    - So, remove the "loop":false item and the extra stuff at the start.
+    - It should be an array of JSON objects of the format { name1:{start, end}, name2:{start,end} , ... nameX:{start,end}}
+
+14) Make a file called trials.csv. See the example one. You only need to fill in the details for the following columns:
+    - clear_speaker_pic,a_speaker_pic,b_speaker_pic,trial_type,target_sentence,foil_sentence
+    - pic columns need to be local paths to the pictures
+    - the other columns will be filled in automatically next
+    - This is where you do any arranging of the stims in terms of sounds/images.
+
+15) Load up python and paste in the code from make_csv.py.
+    - This will make a new CSV called trials2.csv with all the extra info filled in.
+    - Might need to change paths to files or names of files.
+
+16) Go to http://www.csvjson.com/csv2json and load in trials2.csv
+    - Settings: Auto-detect for seperator
+    - Settings: Output should be "Array", not "Hash"
+
+17) Save that file to trials.json or something
+
+18) Use that to make trials.js. This is just the JSON object assigned to a var called trials.
+
+19) Append to that file a var called training_trials with a similar JSON object. I made this by hand as there were only three or so of them.
+
+20) That's it!

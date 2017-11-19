@@ -1,0 +1,217 @@
+{"the_cat_is_sleeping": {
+    "start": 3,
+    "end": 4.58
+  },
+  "the_frog_is_jumping": {
+    "start": 6,
+    "end": 7.890340136054422
+  },
+  "the_mouse_loves_cheese": {
+    "start": 9,
+    "end": 10.86
+  },
+  "the_cat_is_sleeping_NOISY": {
+    "start": 12,
+    "end": 13.58
+  },
+  "the_frog_is_jumping_NOISY": {
+    "start": 15,
+    "end": 16.890340136054423
+  },
+  "the_mouse_loves_cheese_NOISY": {
+    "start": 18,
+    "end": 19.86
+  },
+  "he_dropped_the_cheeseburger": {
+    "start": 21,
+    "end": 22.603990929705216
+  },
+  "he_finished_all_the_chocolates": {
+    "start": 24,
+    "end": 25.89201814058957
+  },
+  "he_is_peeling_a_banana": {
+    "start": 27,
+    "end": 28.62
+  },
+  "he_made_a_salad": {
+    "start": 30,
+    "end": 31.344263038548753
+  },
+  "she_bought_a_cake": {
+    "start": 33,
+    "end": 34.254557823129254
+  },
+  "she_grew_lots_of_tomatoes": {
+    "start": 36,
+    "end": 38.07600907029479
+  },
+  "she_has_cereal_for_breakfast": {
+    "start": 40,
+    "end": 41.997074829931975
+  },
+  "she_likes_eating_carrots": {
+    "start": 43,
+    "end": 44.74
+  },
+  "the_bee_is_on_the_flower": {
+    "start": 46,
+    "end": 47.5
+  },
+  "the_birds_are_flying": {
+    "start": 49,
+    "end": 50.416167800453515
+  },
+  "the_butterfly_is_pretty": {
+    "start": 52,
+    "end": 53.56401360544218
+  },
+  "the_cheese_is_tasty": {
+    "start": 55,
+    "end": 56.37199546485261
+  },
+  "the_chickens_lay_eggs": {
+    "start": 58,
+    "end": 59.62800453514739
+  },
+  "the_dog_is_barking": {
+    "start": 61,
+    "end": 62.33199546485261
+  },
+  "the_dolphins_are_swimming": {
+    "start": 64,
+    "end": 65.72748299319728
+  },
+  "the_elephant_is_very_big": {
+    "start": 67,
+    "end": 69.18836734693878
+  },
+  "the_fish_are_in_the_river": {
+    "start": 71,
+    "end": 72.53199546485261
+  },
+  "the_horses_are_in_the_field": {
+    "start": 74,
+    "end": 76.09197278911564
+  },
+  "the_ladybirds_are_very_red": {
+    "start": 78,
+    "end": 80.23834467120182
+  },
+  "the_monkey_is_up_in_the_tree": {
+    "start": 82,
+    "end": 84.09460317460318
+  },
+  "the_pizza_was_too_hot": {
+    "start": 86,
+    "end": 87.9
+  },
+  "the_turtle_lives_in_the_sea": {
+    "start": 89,
+    "end": 90.7954195011338
+  },
+  "we_had_pasta_for_dinner": {
+    "start": 92,
+    "end": 93.87448979591836
+  },
+  "we_took_some_sandwiches": {
+    "start": 95,
+    "end": 96.6280045351474
+  },
+  "he_dropped_the_cheeseburger_SWS": {
+    "start": 98,
+    "end": 99.60399092970522
+  },
+  "he_finished_all_the_chocolates_SWS": {
+    "start": 101,
+    "end": 102.89201814058957
+  },
+  "he_is_peeling_a_banana_SWS": {
+    "start": 104,
+    "end": 105.62
+  },
+  "he_made_a_salad_SWS": {
+    "start": 107,
+    "end": 108.34426303854875
+  },
+  "she_bought_a_cake_SWS": {
+    "start": 110,
+    "end": 111.25455782312925
+  },
+  "she_grew_lots_of_tomatoes_SWS": {
+    "start": 113,
+    "end": 115.07600907029479
+  },
+  "she_has_cereal_for_breakfast_SWS": {
+    "start": 117,
+    "end": 118.99707482993198
+  },
+  "she_likes_eating_carrots_SWS": {
+    "start": 120,
+    "end": 121.74
+  },
+  "the_bee_is_on_the_flower_SWS": {
+    "start": 123,
+    "end": 124.5
+  },
+  "the_birds_are_flying_SWS": {
+    "start": 126,
+    "end": 127.41616780045351
+  },
+  "the_butterfly_is_pretty_SWS": {
+    "start": 129,
+    "end": 130.56401360544217
+  },
+  "the_cheese_is_tasty_SWS": {
+    "start": 132,
+    "end": 133.3719954648526
+  },
+  "the_chickens_lay_eggs_SWS": {
+    "start": 135,
+    "end": 136.6280045351474
+  },
+  "the_dog_is_barking_SWS": {
+    "start": 138,
+    "end": 139.3319954648526
+  },
+  "the_dolphins_are_swimming_SWS": {
+    "start": 141,
+    "end": 142.72748299319727
+  },
+  "the_elephant_is_very_big_SWS": {
+    "start": 144,
+    "end": 146.18836734693878
+  },
+  "the_fish_are_in_the_river_SWS": {
+    "start": 148,
+    "end": 149.5319954648526
+  },
+  "the_horses_are_in_the_field_SWS": {
+    "start": 151,
+    "end": 153.09197278911566
+  },
+  "the_ladybirds_are_very_red_SWS": {
+    "start": 155,
+    "end": 157.23834467120182
+  },
+  "the_monkey_is_up_in_the_tree_SWS": {
+    "start": 159,
+    "end": 161.09460317460318
+  },
+  "the_pizza_was_too_hot_SWS": {
+    "start": 163,
+    "end": 164.9
+  },
+  "the_turtle_lives_in_the_sea_SWS": {
+    "start": 166,
+    "end": 167.79541950113378
+  },
+  "we_had_pasta_for_dinner_SWS": {
+    "start": 169,
+    "end": 170.87448979591838
+  },
+  "we_took_some_sandwiches_SWS": {
+    "start": 172,
+    "end": 173.6280045351474
+  }
+}

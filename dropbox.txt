@@ -1,0 +1,19 @@
+Dropbox account:
+	login
+	pass
+
+Use https://www.dropbox.com/developers/apps to add Dropbox apps (these are folders where stuff can be saved)
+
+Dropbox is used to save the data from experiments.
+
+Each experiment has its own folder on the Dropbox account, which Dropbox calls an app.
+
+Access is by app key and access token.
+
+App key = a key for the Dropbox app, different for each experiment
+
+Access token = a token for the Dropbox account to access the app.
+
+You need to generate an access token for the app key, on the developer's page.
+
+A more secure way to do this would be to use Dropbox's OAUTH2 API (where you would login before running the experiment rather than using these keys/tokens) but I just couldn't get it to work!

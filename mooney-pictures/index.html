@@ -1,0 +1,176 @@
+<html>
+<head>
+	<script src="jquery/jquery-3.0.0.min.js"></script>
+	<script src="jquery/jquery-ui.min.js"></script>
+
+	<script src="trial_data/trials.js"></script>
+	<!-- That is the trial data in JSON format. Loads a var named trials -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dropbox.js/0.10.2/dropbox.min.js"></script>
+	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<link rel="apple-touch-icon" href="images/uoe2.png">
+	<!-- The above three lines stop the screen from being zoomed in on iPad, lets it be used app-style and sets up an icon for the app. -->
+
+
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+	<!-- Main Bootstrap CSS for layout and stuff like that. -->
+	<link rel="stylesheet" href="index.css"/>
+	<!-- Extra CSS fiddling -->
+
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <script>
+  	// Prevents dragging the screen on iPad
+    document.body.addEventListener('touchmove', function(event) {
+      console.log(event.source);
+        event.preventDefault();
+    }, false);
+
+    window.onresize = function() {
+      $(document.body).width(window.innerWidth).height(window.innerHeight);
+    }
+
+    $(function() {
+      window.onresize();
+    });
+  </script>
+
+<!-- This slide is the first one shown, to get subject info. -->
+
+	<div class="slide" id="new_subject">
+		<div class="col-xs-4">
+			<img src="images/uoe.png" class='img-responsive'>
+		</div>	  
+
+		<div class='col-xs-offset-2 col-xs-6 col-xs-offset-1'>
+
+			<form class="form-inline">
+				<div class="form-group">
+					<div class="input-group" style='width:270px'>
+						<input type="text" class="form-control" id="subject_id" placeholder="Subject ID">
+					</div>
+				</div>
+				<button type="button" class="btn btn-primary" onClick="fill_field()">Generate</button>
+
+			</form>
+
+			<div class="form-group">
+				<div class="input-group">
+					<input type="date" class="form-control" id="date_of_birth" placeholder="Date of birth">
+				</div>
+			</div>			
+
+			<form class="form-inline">
+				<div class="input-group">
+					<div class="row">
+						<div class="col-xs-12">
+							<input type="checkbox" checked data-toggle="toggle" id="gender" data-on="Male" data-off="Female" data-width="176px">
+						</div>
+					</div>
+				</div>
+			</form>
+
+			<div class="form-group">
+				<div class="input-group">
+					
+					<input type="text" class="form-control" id="num_siblings" placeholder="Number of siblings" style="width:50%">
+					<input type="text" class="form-control" id="birth_order" placeholder="Birth order" style="width:50%">
+
+				</div>
+			</div>
+		
+
+			<div class="form-group">
+				<div class="input-group">
+					<input type="text" class="form-control" id="ethnicity" placeholder="Ethnicity">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="input-group">
+					<input type="text" class="form-control" id="native_lang" placeholder="Native language">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="input-group">
+					<input type="text" class="form-control" id="other_langs" placeholder="Other languages">
+				</div>
+			</div>
+
+
+			<div class="form-group">
+				<div class="input-group">
+					<input type="text" class="form-control" id="parental_occ" placeholder="Parent occupation(s)" >
+				</div>
+			</div>
+
+
+			<div class="form-group">
+				<div class="input-group">
+					<input type="text" class="form-control" id="dev_info" placeholder="Developmental information" >
+				</div>
+			</div>
+
+			<button type="button" style='width:357px' class="btn btn-block" id="beforeStudy" onClick="this.blur(); do_training(0)">Start</button>
+
+		</div>
+
+	</div>
+
+
+<!-- This is the second slide to be shown, with the dot training sequences. -->
+
+	<div class="slide" id="training">
+	</div>
+
+<!-- Third slide, shown after the training. Just has a "Begin!" button to start the trials. -->
+
+	<div class="slide" id="confirm">
+		<div class='button-container' height='200px' style="height:100px">
+			<button type="button" style="height:100px" class="btn btn-block" onClick="this.blur(); confirm()">Begin!</button>
+		</div>	
+	</div>
+
+<!-- Fourth slide, which contains all the trials. This has HTML inserted into it by JavaScript. -->
+
+	<div class="slide" id="stage">
+		
+		<div id="top_container" style="text-align:center">
+			<img id="top_img" src="">
+			<img id="teacher" src="images/assets/teacher.png">
+
+		</div>
+
+		<div id ="options_container">
+			<img class="choice" id="left" src="">
+			<img class="robot" id="robot_left" src="">
+			<img class="choice" id="right" src="">
+			<img class="robot" id="robot_right" src="">
+		</div>
+	</div>
+
+
+<!-- Final slide, with an "All done!" screen. -->
+
+	<div class="slide" id="finished" style="padding-top:20%;text-align:center;background:#041E42;color:white;font-size:100px">
+		<p>All done!</p>
+		<br><br>
+		<img src="images/dots/dot_smiley.jpg">
+		<br><br><br><br>
+	</div>
+
+
+	<script src="main.js"></script>
+	<!-- This loads the main JavaScript functions and also calls up the new subject slide, allowing the whole thing to begin. -->
+
+</body>
+</html>

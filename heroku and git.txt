@@ -1,0 +1,71 @@
+* Need installed:
+
+  git https://git-scm.com/download/mac
+  heroku https://toolbelt.heroku.com/
+
+  Heroku account:
+    login
+    pass
+  
+
+* Set up Heroku
+
+  - login if needed:
+      heroku login
+
+  - create a new app with name of NAME. This NAME will make the URL for the app, which will be NAME.herokuapp.com:
+      heroku create NAME
+
+  - it should set your remote git location to this, but if not then use:
+      heroku git:remote -a NAME
+
+
+* Set up app folder
+
+  - in a folder, make two files. These are used to get heroku to work as a PHP app, as there is no way to do a plain
+    html/js app:
+      composer.json
+      index.php
+
+  - composer.json should be one line:
+      {}
+
+  - index.php should be one line:
+      <?php include_once("main.html"); ?>
+
+  - in this folder, create a new repository:
+      git init
+
+
+* Update git
+
+  - write whatever code you want or make changes etc
+
+  - update the repository with the files in the folder:
+      git add .
+
+  - commit the changes to the repository, with a description:
+      git commit -m "description here"
+
+* Push git to heroku
+
+  - To upload the app to heroku and get it running:
+      git push heroku master
+
+* Check app is on heroku
+
+  - Go to http://NAME.herokuapp.com/appfilename.html in a web browser
+
+    (appfilename.html will depend on what you named your app's main page)
+
+* Multiple apps
+
+  - each has its own folder
+  - each folder contains a git repo
+  - each app also has its own app/domain on heroku
+
+  - be careful when working with more than one app, that you don't push the wrong git repo to your currently selected heroku app!
+  - check current git remote point on heroku with:
+      git remote -v
+  - if it is not set to the right one, then change it with:
+      heroku git:remote -a NAME
